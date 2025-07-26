@@ -18,5 +18,11 @@ public class T007_FactorialCalculatorTest {
         assertEquals(1, A007_FactorialCalculator.factorialRecursive(1));
     }
 
+    @Test
+    public void testNegativeInputThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> A007_FactorialCalculator.factorialIterative(-3));
+        assertThrows(IllegalArgumentException.class, () -> A007_FactorialCalculator.factorialRecursive(-3));
+    }
+
 
 }
